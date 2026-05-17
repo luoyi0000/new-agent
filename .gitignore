@@ -58,3 +58,12 @@ Thumbs.db
 
 # --- Jupyter ---
 .ipynb_checkpoints/
+
+# --- Claude Code ---
+.claude/
+
+# --- Node.js ---
+node_modules/
+
+# --- Legacy backup ---
+_legacy/
