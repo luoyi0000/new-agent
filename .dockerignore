@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Git
+.git/
+.gitignore
+
+# Legacy
+_legacy/
+
+# Frontend (built separately)
+web-frontend/node_modules/
+web-frontend/dist/
+web-frontend/.vite/
+
+# Data (mounted as volumes in production)
+data/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Testing
+test_*.py
+test_*.db

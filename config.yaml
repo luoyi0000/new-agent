@@ -5,7 +5,7 @@ llm:
   deployment_name: ""
   azure_endpoint: ""
   api_version: ""
-  api_key: "sk-d8c56bb53e604ff89f64271c9cd30aa8"
+  api_key: ""            # 生产环境通过环境变量 LLM_API_KEY 设置
   temperature: 0.0
   max_tokens: 4096
 
@@ -16,13 +16,8 @@ embedding:
   provider: "openai"  # 复用 OpenAI provider，通过 base_url 接入阿里云百炼兼容模式
   model: "text-embedding-v3"
   dimensions: 1024  # text-embedding-v3 默认维度
-  # 阿里云百炼兼容模式配置:
   base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
-  api_key: "sk-e173a6303a5d4fc9afa06c2f7e1553d3"
-  # 以下 Azure 配置不适用，留空:
-  azure_endpoint: ""
-  deployment_name: ""
-  api_version: ""
+  api_key: ""            # 生产环境通过环境变量 EMBEDDING_API_KEY 设置
 
 # =============================================================================
 # Vision LLM Configuration (for Image Captioning)
@@ -31,10 +26,6 @@ vision_llm:
   enabled: true                    # 启用图片自动描述
   provider: "openai"               # 复用 OpenAI-compatible provider
   model: "kimi-latest"             # Kimi 支持 Vision 的模型
-  api_key: "sk-kimi-I9Cdp1xrFwWLVYPc2kigYTn643t75TcRh7qhCFxb5ZTtPFx4i5MdKXMChYBmSTrw"
+  api_key: ""                      # 生产环境通过环境变量 VISION_API_KEY 设置
   base_url: "https://api.moonshot.cn/v1"
-  # Azure-compatible settings (不适用，留空):
-  azure_endpoint: ""
-  deployment_name: ""
-  api_version: ""
   max_image_size: 2048             # Max dimension (width/height) for image compression
